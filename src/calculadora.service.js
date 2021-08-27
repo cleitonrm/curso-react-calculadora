@@ -25,8 +25,22 @@ function CalculadoraService() {
         return resultado;
     }
 
+    function concatenarNumero(numAtual, numConcat) {
+        if (numAtual === "0" || numAtual === null) {
+            numAtual = '';
+        }
+        if (numConcat === '.' && numAtual === '') {
+            return '0.';
+        }
+        if (numConcat === '.' && numAtual.indexOf('.') > -1) {
+            return numAtual;
+        }
+
+        return numAtual + numConcat;
+    }
+
     return [
-        calcular, SOMA , SUBTRACAO, DIVISAO, MULTIPLICACAO
+        calcular, concatenarNumero, SOMA , SUBTRACAO, DIVISAO, MULTIPLICACAO
     ];
 };
 
