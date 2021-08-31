@@ -70,7 +70,7 @@ function Calculadora() {
             <Button variant="danger" onClick = {limpar}>C</Button>
           </Col>
           <Col xs='9'>
-            <Form.Control type="text" name ="txtNumeros" readOnly="readonly" value={txtNumeros} data-testid = 'txtNumeros'></Form.Control>
+            <Form.Control type="text" name ="txtNumeros" readOnly="readonly" value={txtNumeros} data-testid = 'txtNumeros' className='text-end'></Form.Control>
           </Col>
         </Row>
         <Row>
